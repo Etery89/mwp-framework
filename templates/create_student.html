@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}
+    Обучающий центр дополнительного образования - Создать студента
+{% endblock %}
+{% block content %}
+    <div>
+        <a href="/student-list/">Список студентов</a>
+    </div>
+    <div>
+        <h1>Создание студента</h1>
+        <form method="post">
+            <input type="text" name="name" placeholder="Имя">
+            <input type="text" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Пароль">
+            <button type="submit">Сохранить</button>
+        </form>
+    </div>
+{% endblock %}

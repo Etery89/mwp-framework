@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}
+  Обучающий центр дополнительного образования - Контакты
+{% endblock %}
+{% block content %}
+<div id="content">
+  <h1>Контакты</h1>
+  <p>Москва, улица Строителей, дом 17.</p>
+  <p>Телефон: +7(495)777-56-56</p>
+  <p>email: LearnCenter@ yandex.ru</p>
+  <p><br /><br />Заполните эту форму, если хотите оставить заявку или отправить нам сообщение:</p>
+  <p>Или просто позвоните нам :)</p>
+  <form action="#" method="post">
+    <div class="form_settings">
+      <p><span>Имя</span><input class="contact" type="text" name="your_name" value="" /></p>
+      <p><span>email</span><input class="contact" type="text" name="your_email" value="" /></p>
+      <p><span>Сообщение</span><textarea class="contact textarea" rows="8" cols="50" name="your_enquiry"></textarea></p>
+      <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="Отправить" /></p>
+    </div>
+  </form>
+</div>
+{% endblock %}
+

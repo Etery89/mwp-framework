@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}
+    Создание курса
+{% endblock %}
+{% block content %}
+    <div>
+        <a href="/courses-list/?id={{id}}">назад</a>
+    </div>
+
+    <br>
+    <br>
+
+    <div>
+        <h1>Создание курса для категории "{{name}}"</h1>
+        <h4>(Доступные на текущий момент типы курсов: week, month, three day)</h4>
+        <form method="post">
+            <input type="text" name="name" placeholder="Название">
+            <input type="text" name="type" placeholder="Тип курса">
+            <button type="submit">Сохранить и вернуться к списку курсов</button>
+        </form>
+    </div>
+{% endblock %}

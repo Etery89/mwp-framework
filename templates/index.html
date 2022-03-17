@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}
+  Обучающий центр дополнительного образования
+{% endblock %}
+{% block content %}
+  <div id="content">
+    <h1>Добро пожаловать на сайт дополнительного образования!</h1>
+    <p>Вы хотите стать разработчиком? Освоить дополнительные инструменты? Повысить квалификацию? Мы поможем!</p>
+    <p>А если чего-то не найдёте у нас, обязательно найдёте у наших партнёров - <a href="https://gb.ru/">GeekBrains</a>)</p>
+    <p>Основное направление образовательных программ - язык программирования <strong>Python</strong>, а также <strong>Инструменты разработчика: Git, PyCharm, VSCode</strong> и тд...</p>
+    <p>Так вперёд за новыми знаниями!</p>
+    <div>
+      <div>
+        <a href="/create-category/">Создать новую категорию</a>
+      </div>
+      <div>
+        <a href="/create-student/">Создать студента</a>
+      </div>
+      <h1>Список существующих категорий</h1>
+          {% for item in objects_list %}
+          <li>
+              {{ item.name }} <span>Количество курсов: {{item.get_courses_count()}}</span>
+            <a href="/courses-list/?id={{item.id}}">Показать курсы</a>
+          </li>
+          {% endfor %}
+    </div>
+    <p><br /><br /><br /><br />За использование шаблона выражаю благодарность автору - <a href="https://www.html5webtemplates.co.uk/templates/">Сайт с шаблонами</a></p>
+  </div>
+{% endblock %}
+
